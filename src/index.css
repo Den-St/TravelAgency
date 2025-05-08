@@ -1,3 +1,54 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --default-font-family: 'Nunito';
+
+  --color-blue-100: #f7fdff;
+  --color-blue-200: #edf4f4;
+  --color-blue-300: #e7f9ff;
+  --color-blue-400: #68d8ff;
+  --color-blue-500: #027eac;
+  --color-blue-600: #026c96;
+  --color-blue-700: #015878;
+  --color-blue-900: #0b3857;
+
+  --color-grey-500: #d3e1ed;
+  --color-grey-600: #a2aeb9;
+  --color-grey-700: #677883;
+
+  --color-green-100: #edffee;
+  --color-green-400: #118819;
+
+  --color-red-300: #fce9ed;
+  --color-red-400: #b70b0b;
+}
+
+@layer base {
+  h1 {
+    @apply text-[32px] leading-[40px] tracking-[0px] font-semibold;
+  }
+
+  h2 {
+    @apply text-[24px] leading-[40px] tracking-[0px] font-bold;
+  }
+
+  h3 {
+    @apply text-[18px] leading-[32px] tracking-[0px] font-bold;
+  }
+
+  p {
+    @apply text-[14px] leading-[24px] tracking-[0px] font-normal;
+  }
+
+  .block-title {
+    @apply text-[14px] leading-[24px] tracking-[0px] font-light;
+  }
+
+  .caption {
+    @apply text-[12px] leading-[16px] tracking-[0px] font-normal;
+  }
+
+  nav {
+    @apply text-[24px] leading-[32px] tracking-[0px] font-medium;
+  }
+}
