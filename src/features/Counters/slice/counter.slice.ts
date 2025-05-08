@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { CountersStateT,IncrementActionT,DecrementActionT, CounterId } from "./counter.slice.types";
+import { type CountersStateT, type IncrementActionT, type DecrementActionT, type CounterId } from "./counter.slice.types";
 
 // const initialCounterState:CounterStateT =  {counter:0} ;// изначальное состояние counterов 
 const initialCountersState:CountersStateT = {};// изначальное состояние counterов
