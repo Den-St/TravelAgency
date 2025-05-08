@@ -1,0 +1,36 @@
+# Logs
+logs
+*.log
+*.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.babelrc
+.eslintrc
+.stylelintrc
+vite.config.ts
+docker-compose-for-ui-devs.yml
+.gitlab-ci/*
+.gitlab-ci.yml
+deploy.yaml
+node_modules
+dist
+coverage
+build
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.md
+index.html
