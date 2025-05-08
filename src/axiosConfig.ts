@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { getToken } from './features/auth/helpers/tokenHandlers';
+import { getToken } from './shared/helpers/tokenHandlers';
 
 export const getConfig = () => {
   const token = getToken();
