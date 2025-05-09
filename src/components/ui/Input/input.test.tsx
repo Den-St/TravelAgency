@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 
 import { Input } from './input';
 
@@ -10,9 +10,24 @@ describe('Input Component', () => {
     expect(getByTestId('input-testid')).toBeInTheDocument();
   });
 
-  it('should render', () => {
-    const { getByTestId } = render(<Input data-testid="input-testid" />);
+  it('input type should change after eye button clicked', () => {
+    const { getByTestId } = render(
+      <Input data-testid="input-testid2" type="password" isHidden />
+    );
 
-    expect(getByTestId('input-testid')).toBeInTheDocument();
+    const eyeButton = getByTestId('eye');
+
+    expect((getByTestId('input-testid2') as HTMLInputElement).type).toBe(
+      'password'
+    );
+    fireEvent.click(eyeButton);
+    expect((getByTestId('input-testid2') as HTMLInputElement).type).toBe(
+      'text'
+    );
+    const eyeCrossedButton = getByTestId('eye-crossed');
+    fireEvent.click(eyeCrossedButton);
+    expect((getByTestId('input-testid2') as HTMLInputElement).type).toBe(
+      'password'
+    );
   });
 });

@@ -52,11 +52,13 @@ function Input({
         <>
           {localType === 'password' ? (
             <Eye
+              data-testid="eye"
               className="icon cursor-pointer absolute right-[12px] top-[16px]"
               onClick={togglePasswordVisibility}
             />
           ) : (
             <EyeCrossed
+              data-testid="eye-crossed"
               className="icon cursor-pointer absolute right-[12px] top-[16px]"
               onClick={togglePasswordVisibility}
             />
