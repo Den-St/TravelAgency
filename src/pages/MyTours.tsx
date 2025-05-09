@@ -1,5 +1,3 @@
 export const MyTours = () => {
-    return (
-        <h1>mytours</h1>
-    )
-}
+  return <h1>mytours</h1>;
+};
