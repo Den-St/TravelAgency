@@ -1,17 +1,12 @@
-import { describe, it } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom'; // Import MemoryRouter
+import { describe, expect, it } from 'vitest';
+import { render } from '@testing-library/react';
 
 import { Input } from './input';
 
-describe('A truthy statement', () => {
-  it('renders the Input component', () => {
-    render(
-      <MemoryRouter>
-        <Input />
-      </MemoryRouter>
-    );
+describe('Input Component', () => {
+  it('should render', () => {
+    const { getByTestId } = render(<Input data-testid="input-testid" />);
 
-    screen.debug(); // prints out the jsx in the App component unto the command line
+    expect(getByTestId('input-testid')).toBeInTheDocument();
   });
 });
