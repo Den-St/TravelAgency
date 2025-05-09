@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import "tw-animate-css";
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -43,6 +43,9 @@
     @apply text-[14px] leading-[24px] tracking-[0px] font-normal;
   }
 
+  .button {
+    @apply text-[14px] leading-[24px] tracking-[0px] font-bold;
+  }
   .block-title {
     @apply text-[14px] leading-[24px] tracking-[0px] font-light;
   }
