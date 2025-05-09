@@ -1,28 +1,33 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { type CountersStateT, type IncrementActionT, type DecrementActionT, type CounterId } from "./counter.slice.types";
+import { createSlice } from '@reduxjs/toolkit';
+import {
+  type CountersStateT,
+  type IncrementActionT,
+  type DecrementActionT,
+  type CounterId,
+} from './counter.slice.types';
 
-// const initialCounterState:CounterStateT =  {counter:0} ;// изначальное состояние counterов 
-const initialCountersState:CountersStateT = {};// изначальное состояние counterов
+// const initialCounterState:CounterStateT =  {counter:0} ;// изначальное состояние counterов
+const initialCountersState: CountersStateT = {}; // изначальное состояние counterов
 
 export const countersSlice = createSlice({
-    name:"counters",
-    initialState:initialCountersState,
-    reducers:{
-        increment:(state = initialCountersState, action:IncrementActionT)=>{
-            if(!state[action.payload.counterId]){
-                state[action.payload.counterId] = {counter:0};
-            }
-            state[action.payload.counterId]!.counter++;
-        },
-        decrement:(state = initialCountersState, action:DecrementActionT)=>{
-            if(!state[action.payload.counterId]){
-                state[action.payload.counterId] = {counter:0};
-            }
-            state[action.payload.counterId]!.counter--;
-        },
+  name: 'counters',
+  initialState: initialCountersState,
+  reducers: {
+    increment: (state = initialCountersState, action: IncrementActionT) => {
+      if (!state[action.payload.counterId]) {
+        state[action.payload.counterId] = { counter: 0 };
+      }
+      state[action.payload.counterId]!.counter++;
     },
-    selectors:{
-        selectCounter:(state:CountersStateT,counterId:CounterId) => state[counterId]?.counter
-    }
-});// создаем слайс для счетчиков
-
+    decrement: (state = initialCountersState, action: DecrementActionT) => {
+      if (!state[action.payload.counterId]) {
+        state[action.payload.counterId] = { counter: 0 };
+      }
+      state[action.payload.counterId]!.counter--;
+    },
+  },
+  selectors: {
+    selectCounter: (state: CountersStateT, counterId: CounterId) =>
+      state[counterId]?.counter,
+  },
+}); // создаем слайс для счетчиков
