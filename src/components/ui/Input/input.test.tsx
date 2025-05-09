@@ -9,4 +9,10 @@ describe('Input Component', () => {
 
     expect(getByTestId('input-testid')).toBeInTheDocument();
   });
+
+  it('should render', () => {
+    const { getByTestId } = render(<Input data-testid="input-testid" />);
+
+    expect(getByTestId('input-testid')).toBeInTheDocument();
+  });
 });

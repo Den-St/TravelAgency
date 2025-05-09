@@ -50,6 +50,12 @@
     @apply text-[14px] leading-[24px] tracking-[0px] font-light;
   }
 
+  .input{
+    @apply border-[1px] p-4 text-[14px] leading-[24px] w-full min-w-0 flex rounded-[8px] bg-transparent outline-none duration-200;
+  }
+  .icon{
+    @apply w-[24px] h-[24px];
+  }
   .caption {
     @apply text-[12px] leading-[16px] tracking-[0px] font-normal;
   }
