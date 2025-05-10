@@ -63,7 +63,9 @@
   .caption {
     @apply text-[12px] leading-[16px] tracking-[0px] font-normal text-grey-700;
   }
-
+  .form-error{
+    @apply text-[12px] leading-[16px] tracking-[0px] font-normal text-red-400;
+  }
   nav {
     @apply text-[24px] leading-[32px] tracking-[0px] font-medium;
   }

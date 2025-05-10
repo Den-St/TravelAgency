@@ -1,7 +1,3 @@
 export const SignInForm = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  return <div></div>;
+};

@@ -1,5 +1,9 @@
-import { SignInForm } from "@/widgets/Signin/ui/SignInForm";
+import { SignInForm } from '@/widgets/Signin/ui/SignInForm';
 
 export const SignIn = () => {
-  return <div><SignInForm/></div>;
+  return (
+    <div>
+      <SignInForm />
+    </div>
+  );
 };
