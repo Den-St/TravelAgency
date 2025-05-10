@@ -1,3 +1,5 @@
+import { RegistrationForm } from "@/widgets/Registration/ui/RegistrationForm";
+
 export const Registration = () => {
-  return <div>registration</div>;
+  return <div><RegistrationForm/></div>;
 };

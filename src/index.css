@@ -32,7 +32,7 @@
   }
 
   h2 {
-    @apply text-[24px] leading-[40px] tracking-[0px] font-bold;
+    @apply text-[24px] leading-[40px] tracking-[0px] font-bold text-blue-900;
   }
 
   h3 {
@@ -43,11 +43,15 @@
     @apply text-[14px] leading-[24px] tracking-[0px] font-normal;
   }
 
+  label{
+    @apply text-[14px] leading-[24px] tracking-[0px] font-bold text-blue-900;
+  }
+
   .button {
     @apply text-[14px] leading-[24px] tracking-[0px] font-bold;
   }
   .block-title {
-    @apply text-[14px] leading-[24px] tracking-[0px] font-light;
+    @apply text-[14px] leading-[24px] tracking-[0px] font-light text-blue-900;
   }
 
   .input{
@@ -57,7 +61,7 @@
     @apply w-[24px] h-[24px];
   }
   .caption {
-    @apply text-[12px] leading-[16px] tracking-[0px] font-normal;
+    @apply text-[12px] leading-[16px] tracking-[0px] font-normal text-grey-700;
   }
 
   nav {
