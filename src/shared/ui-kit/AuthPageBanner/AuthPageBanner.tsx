@@ -10,7 +10,7 @@ export const AuthPageBanner = () => {
       style={{ backgroundImage: `url(${banner})` }}
     >
       <div className="flex">
-        <Luggage className="text-white w-[28px] h-[40px]" />
+        <Luggage className="text-white w-[35px]! h-[40px]!" />
         <h1 className="text-white">{travelAgency}</h1>
       </div>
       <h1 className="font-extrabold text-[64px] leading-[120%] text-blue-900">
