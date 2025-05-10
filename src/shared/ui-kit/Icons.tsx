@@ -2,6 +2,8 @@ export {
   LuEye as Eye,
   LuWallet as Wallet,
   LuInfo as Info,
+  LuUsersRound as Users,
+  LuTreePalm as Resort,
 } from 'react-icons/lu';
 export { IoMdEyeOff as EyeCrossed } from 'react-icons/io';
 export { FaStar as Star } from 'react-icons/fa6';
