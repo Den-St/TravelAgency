@@ -66,6 +66,9 @@
   .form-error{
     @apply text-[12px] leading-[16px] tracking-[0px] font-normal text-red-400;
   }
+  .link {
+    @apply text-[12px] leading-[16px] tracking-[0px] font-normal text-blue-500 underline;
+  }
   nav {
     @apply text-[24px] leading-[32px] tracking-[0px] font-medium;
   }

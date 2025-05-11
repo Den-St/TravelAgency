@@ -53,6 +53,7 @@ export const RegistrationForm = () => {
               type="text"
               id="first-name"
               placeholder={firstNameInputPlaceholder}
+              variant={isError ? 'error' : 'default'}
             />
             {!isError ? (
               <span className="caption">{firstNameExample}</span>
@@ -66,6 +67,7 @@ export const RegistrationForm = () => {
               type="text"
               id="last-name"
               placeholder={lastNameInputPlaceholder}
+              variant={isError ? 'error' : 'default'}
             />
             {isError ? (
               <span className="form-error">{lastNameError}</span>
@@ -76,7 +78,12 @@ export const RegistrationForm = () => {
         </div>
         <div className="flex flex-col gap-1 w-full">
           <label htmlFor="email">{emailLabel}</label>
-          <Input type="text" id="email" placeholder={emailInputPlaceholder} />
+          <Input
+            type="text"
+            id="email"
+            placeholder={emailInputPlaceholder}
+            variant={isError ? 'error' : 'default'}
+          />
           {isError ? (
             <span className="form-error">{emailError}</span>
           ) : (
@@ -90,6 +97,7 @@ export const RegistrationForm = () => {
             hasVisibilityToggle
             id="password"
             placeholder={passwordInputPlaceholder}
+            variant={isError ? 'error' : 'default'}
           />
           <ul>
             {passwordRules.map((rule) =>
@@ -114,6 +122,7 @@ export const RegistrationForm = () => {
             hasVisibilityToggle
             id="confirm-password"
             placeholder={confirmPasswordInputPlaceholder}
+            variant={isError ? 'error' : 'default'}
           />
           {isError ? (
             <div className="flex gap-[8px]">

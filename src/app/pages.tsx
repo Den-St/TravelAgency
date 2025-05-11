@@ -2,7 +2,7 @@
 // and export them for easy import in other files
 export { Home } from './../pages/Home';
 export { Registration } from '../pages/Registration/Registration';
-export { SignIn } from './../pages/SignIn';
+export { SignIn } from '../pages/SignIn/SignIn';
 export { ForgotPassword } from './../pages/ForgotPassword';
 export { MyTours } from './../pages/MyTours';
 export { Tour } from './../pages/Tour';
