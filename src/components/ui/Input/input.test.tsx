@@ -12,7 +12,7 @@ describe('Input Component', () => {
 
   it('input type should change after eye button clicked', () => {
     const { getByTestId } = render(
-      <Input data-testid="input-testid2" type="password" isHidden />
+      <Input data-testid="input-testid2" type="password" hasVisibilityToggle />
     );
 
     const eyeButton = getByTestId('eye');

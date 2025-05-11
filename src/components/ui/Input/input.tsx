@@ -21,13 +21,13 @@ const inputVariants = cva(
 
 type InputProps = {
   wrapperClassName?: string;
-  isHidden?: boolean;
+  hasVisibilityToggle?: boolean;
 };
 
 function Input({
   className,
   wrapperClassName,
-  isHidden,
+  hasVisibilityToggle,
   variant,
   type,
   ...props
@@ -48,7 +48,7 @@ function Input({
         className={cn(inputVariants({ variant, className }), 'input')}
         {...props}
       />
-      {isHidden && (
+      {hasVisibilityToggle && (
         <>
           {localType === 'password' ? (
             <Eye
