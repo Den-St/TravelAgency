@@ -1,6 +1,6 @@
 import { format } from 'date-fns';
 
-import { ShadowWrapper } from '@/components/ui/ShadowWrapper/ShadowWrapper';
+import { ShadowWrapper } from '../ShadowWrapper/ShadowWrapper';
 import {
   Star,
   Calendar,
