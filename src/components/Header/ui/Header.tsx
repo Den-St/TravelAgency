@@ -13,20 +13,20 @@ import { Link } from 'react-router-dom';
 // }
 
 export const Header = () => {
-  const [isAuthed] = useState(true); //just for testing unauthed user
+  const [isAuthed] = useState(false); //just for testing unauthed user
   //   const [role] = useState<"client" | "travelAgent">("client"); //just for testing diferent roles layout
 
   return (
     <header
       data-testid="Header-testid"
-      className="bg-white h-18 flex items-center justify-between px-10"
+      className="bg-white h-18 flex items-center justify-between px-10 relative"
     >
       <div className="flex gap-[10px] items-center">
         <Luggage width={48} height={48} className="text-blue-500" size={48} />
         <h2 className="text-blue-500">{headerText.title}</h2>
       </div>
 
-      <nav className="flex gap-2 h-[100%]">
+      <nav className="flex gap-2 h-[100%] absolute left-1/2 -translate-x-1/2">
         <NavLink text={navLinksText.mainPage} to={routes.homePage} />
         {isAuthed && (
           <NavLink text={navLinksText.myTours} to={routes.myTours} />

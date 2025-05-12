@@ -1,4 +1,3 @@
-import { Input } from '@/components/ui/Input/input';
 import {
   alreadyHaveAccountText,
   confirmPasswordInputPlaceholder,
@@ -29,6 +28,7 @@ import { Link } from 'react-router-dom';
 import { routes } from '@/app/routes';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
+import { Input } from '@/components/ui/Input/Input';
 
 export const RegistrationForm = () => {
   const [isError] = useState(false); //just for testing error state layout
