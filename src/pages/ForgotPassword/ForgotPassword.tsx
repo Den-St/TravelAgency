@@ -1,6 +1,6 @@
 import { AuthLayoutWrapper } from '@/components/ui/AuthLayoutWrapper/AuthLayoutWrapper';
 import { AuthPageBanner } from '@/shared/ui-kit/AuthPageBanner/AuthPageBanner';
-import { ForgotPasswordForm } from '@/widgets/ForgotPassword/ui/ForgotPasswordForm';
+import { ForgotPasswordForm } from '@/components/ForgotPassword/ui/ForgotPasswordForm';
 // import { forgotPasswordTestId } from './ForgotPassword.test';
 
 export const ForgotPassword = () => {

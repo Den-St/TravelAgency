@@ -1,4 +1,4 @@
-import type { TourMock } from '../models/Tours';
+import type { TourMock } from '../../../shared/models/Tours';
 
 export const toursMock: TourMock[] = [
   {

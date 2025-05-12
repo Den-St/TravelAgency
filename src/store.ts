@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { countersSlice } from './features/Counters/slice/counter.slice';
+import { countersSlice } from './components/Counters/slice/counter.slice';
 import { useDispatch, useSelector } from 'react-redux';
 
 export const store = configureStore({

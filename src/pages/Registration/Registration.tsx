@@ -1,6 +1,6 @@
 import { AuthLayoutWrapper } from '@/components/ui/AuthLayoutWrapper/AuthLayoutWrapper';
 import { AuthPageBanner } from '@/shared/ui-kit/AuthPageBanner/AuthPageBanner';
-import { RegistrationForm } from '@/widgets/Registration/ui/RegistrationForm';
+import { RegistrationForm } from '@/components/Registration/ui/RegistrationForm';
 
 export const Registration = () => {
   return (
