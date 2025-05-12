@@ -4,7 +4,7 @@ import { SignInForm } from '@/components/Signin/ui/SignInForm';
 
 export const SignIn = () => {
   return (
-    <AuthLayoutWrapper data-testid="SignIn-testid">
+    <AuthLayoutWrapper dataTestId="SignIn-testid">
       <SignInForm />
       <AuthPageBanner />
     </AuthLayoutWrapper>
