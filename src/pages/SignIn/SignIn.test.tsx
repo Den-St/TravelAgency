@@ -3,11 +3,11 @@ import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { SignIn } from './SignIn';
 
-describe('RegistrationForm Component', () => {
+describe('SignIn Component', () => {
   it('should render', () => {
     const { getByTestId } = render(
       <MemoryRouter>
-        <SignIn />
+        <SignIn data-testid="SignIn-testid" />
       </MemoryRouter>
     );
 

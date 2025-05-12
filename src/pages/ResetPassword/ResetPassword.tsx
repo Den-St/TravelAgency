@@ -1,11 +1,11 @@
 import { AuthLayoutWrapper } from '@/components/ui/AuthLayoutWrapper/AuthLayoutWrapper';
 import { AuthPageBanner } from '@/shared/ui-kit/AuthPageBanner/AuthPageBanner';
-import { RegistrationForm } from '@/widgets/Registration/ui/RegistrationForm';
+import { ResetPasswordForm } from '@/widgets/ResetPassword/ui/ResetPassword';
 
-export const Registration = () => {
+export const ResetPassword = () => {
   return (
-    <AuthLayoutWrapper data-testid="Registration-testid">
-      <RegistrationForm />
+    <AuthLayoutWrapper data-testid="ResetPassword-testid">
+      <ResetPasswordForm />
       <AuthPageBanner />
     </AuthLayoutWrapper>
   );

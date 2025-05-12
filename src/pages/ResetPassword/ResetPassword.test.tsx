@@ -1,16 +1,16 @@
 import { describe, expect, it } from 'vitest';
 import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import { Registration } from './Registration';
+import { ResetPassword } from './ResetPassword';
 
-describe('Registration Component', () => {
+describe('ResetPassword Component', () => {
   it('should render', () => {
     const { getByTestId } = render(
       <MemoryRouter>
-        <Registration />
+        <ResetPassword />
       </MemoryRouter>
     );
 
-    expect(getByTestId('Registration-testid')).toBeInTheDocument();
+    expect(getByTestId('ResetPassword-testid')).toBeInTheDocument();
   });
 });
