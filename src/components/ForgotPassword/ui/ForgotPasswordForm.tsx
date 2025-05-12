@@ -1,4 +1,4 @@
-import { Input } from '@/components/ui/Input/input';
+import { Input } from '@/components/ui/Input/Input';
 import { cn } from '@/lib/utils';
 import {
   dontHaveAccountText,

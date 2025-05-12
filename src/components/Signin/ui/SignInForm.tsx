@@ -13,7 +13,7 @@ import {
   subheader,
   submitButtonText,
 } from '../consts/text';
-import { Input } from '@/components/ui/Input/input';
+import { Input } from '@/components/ui/Input/Input';
 import { Button } from '@/components/ui/Button/Button';
 import { Link } from 'react-router-dom';
 import { routes } from '@/app/routes';

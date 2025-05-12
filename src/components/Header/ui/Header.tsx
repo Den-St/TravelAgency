@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 // }
 
 export const Header = () => {
-  const [isAuthed] = useState(true); //just for testing unauthed user
+  const [isAuthed] = useState(false); //just for testing unauthed user
   //   const [role] = useState<"client" | "travelAgent">("client"); //just for testing diferent roles layout
 
   return (
