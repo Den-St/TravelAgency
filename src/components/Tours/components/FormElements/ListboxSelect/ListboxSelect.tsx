@@ -41,7 +41,7 @@ export const ListboxSelect = ({
               </div>
 
               {open ? (
-                <ChevronUp className="w-5.5 h-5.5 text-blue-900 hover:cursor-pointer" />
+                <ChevronUp className="w-6 h-6 text-blue-900 hover:cursor-pointer" />
               ) : (
                 <ChevronDown className="w-6 h-6 text-blue-900 hover:cursor-pointer" />
               )}
