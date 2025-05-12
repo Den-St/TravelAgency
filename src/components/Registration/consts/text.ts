@@ -1,6 +1,16 @@
 export const subheader = "LET'S GET YOU STARTED";
 export const header = 'Create an Account';
 
+export const fieldErrors = {
+  firstName:
+    'First name must be up to 50 characters. Only Latin letters, hyphens, and apostrophes are allowed.',
+  lastName:
+    'Last name must be up to 50 characters. Only Latin letters, hyphens, and apostrophes are allowed.',
+  email:
+    'Invalid email address. Please ensure it follows the format: username@domain.com',
+  confirmPassword: 'Confirm password must match your password',
+};
+
 export const firstNameLabel = 'First Name';
 export const firstNameInputPlaceholder = 'Enter your first name';
 export const firstNameExample = 'e.g. Johnson';

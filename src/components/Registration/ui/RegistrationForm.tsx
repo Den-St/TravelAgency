@@ -3,16 +3,14 @@ import {
   confirmPasswordInputPlaceholder,
   confirmPasswordLabel,
   confirmPasswordRule,
-  emailError,
   emailExample,
   emailInputPlaceholder,
   emailLabel,
-  firstNameError,
+  fieldErrors,
   firstNameExample,
   firstNameInputPlaceholder,
   firstNameLabel,
   header,
-  lastNameError,
   lastNameExample,
   lastNameInputPlaceholder,
   lastNameLabel,
@@ -29,12 +27,15 @@ import { routes } from '@/app/routes';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
 import { Input } from '@/components/ui/Input/Input';
+import { fieldRules, useRegistration } from '../hooks/registration';
 
 export const RegistrationForm = () => {
   const [isError] = useState(false); //just for testing error state layout
+  const { register, handleRegistration, isLoading, errors } = useRegistration();
 
   return (
     <form
+      onSubmit={handleRegistration}
       data-testid="RegistrationForm-testid"
       className={cn(
         'max-w-[664px] w-[50%] flex flex-col gap-10 pt-[54px] px-21 bg-white rounded-[32px] shadow-[0px_2px_10px_6px_#027EAC33]',
@@ -50,27 +51,41 @@ export const RegistrationForm = () => {
           <div className="flex flex-col gap-1 w-full">
             <label htmlFor="first-name">{firstNameLabel}</label>
             <Input
+              {...register('firstName', {
+                required: fieldErrors.firstName,
+                pattern: {
+                  value: fieldRules.firstName,
+                  message: fieldErrors.firstName,
+                },
+              })}
               type="text"
               id="first-name"
               placeholder={firstNameInputPlaceholder}
-              variant={isError ? 'error' : 'default'}
+              variant={!!errors.firstName?.message ? 'error' : 'default'}
             />
-            {!isError ? (
-              <span className="caption">{firstNameExample}</span>
+            {!!errors.firstName?.message ? (
+              <span className="form-error">{errors.firstName.message}</span>
             ) : (
-              <span className="form-error">{firstNameError}</span>
+              <span className="caption">{firstNameExample}</span>
             )}
           </div>
           <div className="flex flex-col gap-1 w-full">
             <label htmlFor="last-name">{lastNameLabel}</label>
             <Input
+              {...register('lastName', {
+                required: fieldErrors.lastName,
+                pattern: {
+                  value: fieldRules.lastName,
+                  message: fieldErrors.lastName,
+                },
+              })}
               type="text"
               id="last-name"
               placeholder={lastNameInputPlaceholder}
-              variant={isError ? 'error' : 'default'}
+              variant={!!errors.lastName?.message ? 'error' : 'default'}
             />
-            {isError ? (
-              <span className="form-error">{lastNameError}</span>
+            {!!errors.lastName?.message ? (
+              <span className="form-error">{errors.lastName?.message}</span>
             ) : (
               <span className="caption">{lastNameExample}</span>
             )}
@@ -79,13 +94,20 @@ export const RegistrationForm = () => {
         <div className="flex flex-col gap-1 w-full">
           <label htmlFor="email">{emailLabel}</label>
           <Input
+            {...register('email', {
+              required: fieldErrors.email,
+              pattern: {
+                value: fieldRules.email,
+                message: fieldErrors.email,
+              },
+            })}
             type="text"
             id="email"
             placeholder={emailInputPlaceholder}
-            variant={isError ? 'error' : 'default'}
+            variant={!!errors.email?.message ? 'error' : 'default'}
           />
-          {isError ? (
-            <span className="form-error">{emailError}</span>
+          {!!errors.email?.message ? (
+            <span className="form-error">{errors.email?.message}</span>
           ) : (
             <span className="caption">{emailExample}</span>
           )}
@@ -93,6 +115,13 @@ export const RegistrationForm = () => {
         <div className="flex flex-col gap-1 w-full">
           <label htmlFor="password">{passwordLabel}</label>
           <Input
+            {...register('password', {
+              required: true,
+              pattern: {
+                value: fieldRules.password,
+                message: 'password error',
+              },
+            })}
             type="password"
             hasVisibilityToggle
             id="password"
@@ -101,7 +130,7 @@ export const RegistrationForm = () => {
           />
           <ul>
             {passwordRules.map((rule) =>
-              isError ? (
+              !!errors.password ? (
                 <li key={rule} className="flex gap-[8px] items-center">
                   <Ellipse className="text-red-400 w-[10px] h-[10px]" />
                   <span className="form-error">{rule}</span>
@@ -118,13 +147,16 @@ export const RegistrationForm = () => {
         <div className="flex flex-col gap-1 w-full">
           <label htmlFor="confirm-password">{confirmPasswordLabel}</label>
           <Input
+            {...register('confirmPassword', {
+              required: { value: true, message: fieldErrors.confirmPassword },
+            })}
             type="password"
             hasVisibilityToggle
             id="confirm-password"
             placeholder={confirmPasswordInputPlaceholder}
-            variant={isError ? 'error' : 'default'}
+            variant={!!errors.confirmPassword?.message ? 'error' : 'default'}
           />
-          {isError ? (
+          {!!errors.confirmPassword?.message ? (
             <div className="flex gap-[8px] items-center">
               <Ellipse className="text-red-400 w-[10px] h-[10px]" />
               <span className="form-error">{confirmPasswordRule}</span>
@@ -138,7 +170,9 @@ export const RegistrationForm = () => {
         </div>
       </div>
       <div className="flex flex-col gap-4">
-        <Button type="submit">{submitButtonText}</Button>
+        <Button disabled={isLoading} type="submit">
+          {submitButtonText}
+        </Button>
         <span className="caption">
           {alreadyHaveAccountText}{' '}
           <Link to={routes.signIn} className="text-blue-500 underline">
