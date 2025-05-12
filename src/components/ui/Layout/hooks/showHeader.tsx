@@ -1,5 +1,5 @@
+import { routes } from '@/app/routes';
 import { useLocation } from 'react-router-dom';
-import { routes } from '../../../app/routes';
 
 export const useShowHeader = () => {
   const path = useLocation().pathname;
@@ -7,6 +7,7 @@ export const useShowHeader = () => {
     routes.registration,
     routes.signIn,
     routes.forgotPassword,
+    routes.resetPassword,
   ];
   const showHeader = !headerExcludedRoutes.includes(path);
 

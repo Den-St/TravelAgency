@@ -102,13 +102,13 @@ export const RegistrationForm = () => {
           <ul>
             {passwordRules.map((rule) =>
               isError ? (
-                <li key={rule} className="flex gap-[8px]">
-                  <Ellipse className="text-red-400" />
+                <li key={rule} className="flex gap-[8px] items-center">
+                  <Ellipse className="text-red-400 w-[10px] h-[10px]" />
                   <span className="form-error">{rule}</span>
                 </li>
               ) : (
-                <li key={rule} className="flex gap-[8px]">
-                  <Ellipse className="text-grey-700" />
+                <li key={rule} className="flex gap-[8px] items-center">
+                  <Ellipse className="text-grey-700 w-[10px] h-[10px]" />
                   <span className="caption">{rule}</span>
                 </li>
               )
@@ -125,13 +125,13 @@ export const RegistrationForm = () => {
             variant={isError ? 'error' : 'default'}
           />
           {isError ? (
-            <div className="flex gap-[8px]">
-              <Ellipse className="text-red-400" />
+            <div className="flex gap-[8px] items-center">
+              <Ellipse className="text-red-400 w-[10px] h-[10px]" />
               <span className="form-error">{confirmPasswordRule}</span>
             </div>
           ) : (
-            <div className="flex gap-[8px]">
-              <Ellipse className="text-grey-700" />
+            <div className="flex gap-[8px] items-center">
+              <Ellipse className="text-grey-700 w-[10px] h-[10px]" />
               <span className="caption">{confirmPasswordRule}</span>
             </div>
           )}

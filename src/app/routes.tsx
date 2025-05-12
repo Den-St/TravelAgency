@@ -8,6 +8,7 @@ import {
   Registration,
   SignIn,
 } from './pages';
+import { ResetPassword } from '@/pages/ResetPassword/ResetPassword';
 
 //routes for all the pages
 export const routes = {
@@ -16,6 +17,7 @@ export const routes = {
   registration: '/registration',
   signIn: '/sign-in',
   forgotPassword: '/forgot-password',
+  resetPassword: '/reset-password',
 
   myProfile: '/my-profile',
   myTours: '/my-tours',
@@ -35,6 +37,11 @@ export const PublicRoutes = [
     key={routes.forgotPassword}
     element={<ForgotPassword />}
     path={routes.forgotPassword}
+  />,
+  <Route
+    key={routes.resetPassword}
+    element={<ResetPassword />}
+    path={routes.resetPassword}
   />,
   <Route
     key={routes.myProfile}
