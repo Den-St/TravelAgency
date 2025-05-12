@@ -9,7 +9,7 @@ export const AuthLayoutWrapper: React.FC<AuthLayoutWrapperProps> = ({
 }) => {
   return (
     <div
-      className="flex justify-evenly py-10 px-6 gap-8"
+      className="flex justify-evenly py-10 px-6 min-h-[100vh] gap-8"
       data-testid={dataTestId}
     >
       {children}
