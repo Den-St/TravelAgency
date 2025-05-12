@@ -1,6 +1,6 @@
 import { AuthLayoutWrapper } from '@/components/ui/AuthLayoutWrapper/AuthLayoutWrapper';
 import { AuthPageBanner } from '@/shared/ui-kit/AuthPageBanner/AuthPageBanner';
-import { SignInForm } from '@/widgets/Signin/ui/SignInForm';
+import { SignInForm } from '@/components/Signin/ui/SignInForm';
 
 export const SignIn = () => {
   return (

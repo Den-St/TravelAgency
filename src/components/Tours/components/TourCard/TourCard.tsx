@@ -13,7 +13,7 @@ import {
 import { Button } from '@/components/ui/Button/Button';
 import { LinkButton } from '@/components/ui/Button/LinkButton';
 import { TourCardDetailRow } from './TourCardDetailRow/TourCardDetailRow';
-import type { TourMock } from '../../models/Tours';
+import type { TourMock } from '../../../../shared/models/Tours';
 
 import { TOURS } from '../../constants/uiText';
 
