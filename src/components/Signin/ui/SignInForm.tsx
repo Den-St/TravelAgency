@@ -25,7 +25,7 @@ export const SignInForm = () => {
     <form
       data-testid="SignInForm-testid"
       className={cn(
-        'max-w-[664px] w-[50%] h-[100%] flex flex-col ite gap-10 py-[54px] justify-center px-21 bg-white rounded-[32px] shadow-[0px_2px_10px_6px_#027EAC33]'
+        'max-w-[664px] w-[50%] min-h-[100%] flex flex-col ite gap-10 py-[54px] justify-center px-21 bg-white rounded-[32px] shadow-[0px_2px_10px_6px_#027EAC33]'
       )}
     >
       <div className="flex flex-col">

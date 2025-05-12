@@ -38,7 +38,7 @@ export const RegistrationForm = () => {
       onSubmit={handleRegistration}
       data-testid="RegistrationForm-testid"
       className={cn(
-        'max-w-[664px] w-[50%] flex flex-col gap-10 pt-[54px] px-21 bg-white rounded-[32px] shadow-[0px_2px_10px_6px_#027EAC33]',
+        'max-w-[664px] w-[50%] min-h-[100%] flex flex-col gap-10 pt-[54px] px-21 bg-white rounded-[32px] shadow-[0px_2px_10px_6px_#027EAC33]',
         { 'py-[54px]': !isError, 'py-[38px]': isError }
       )}
     >
