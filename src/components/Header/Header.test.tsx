@@ -1,16 +1,16 @@
 import { describe, expect, it } from 'vitest';
 import { render } from '@testing-library/react';
+import { Header } from './ui/Header';
 import { MemoryRouter } from 'react-router-dom';
-import { SignIn } from './SignIn';
 
-describe('SignIn Component', () => {
+describe('Header Component', () => {
   it('should render', () => {
     const { getByTestId } = render(
       <MemoryRouter>
-        <SignIn />
+        <Header />
       </MemoryRouter>
     );
 
-    expect(getByTestId('SignIn-testid')).toBeInTheDocument();
+    expect(getByTestId('Header-testid')).toBeInTheDocument();
   });
 });

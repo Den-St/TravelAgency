@@ -4,7 +4,7 @@ import { ResetPasswordForm } from '@/components/ResetPassword/ui/ResetPassword';
 
 export const ResetPassword = () => {
   return (
-    <AuthLayoutWrapper data-testid="ResetPassword-testid">
+    <AuthLayoutWrapper dataTestId="ResetPassword-testid">
       <ResetPasswordForm />
       <AuthPageBanner />
     </AuthLayoutWrapper>

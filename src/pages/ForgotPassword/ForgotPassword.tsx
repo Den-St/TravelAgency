@@ -5,7 +5,7 @@ import { ForgotPasswordForm } from '@/components/ForgotPassword/ui/ForgotPasswor
 
 export const ForgotPassword = () => {
   return (
-    <AuthLayoutWrapper data-testid="ForgotPassword-testid">
+    <AuthLayoutWrapper dataTestId="ForgotPassword-testid">
       <ForgotPasswordForm />
       <AuthPageBanner />
     </AuthLayoutWrapper>

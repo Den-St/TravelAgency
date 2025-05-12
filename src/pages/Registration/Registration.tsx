@@ -4,7 +4,7 @@ import { RegistrationForm } from '@/components/Registration/ui/RegistrationForm'
 
 export const Registration = () => {
   return (
-    <AuthLayoutWrapper data-testid="Registration-testid">
+    <AuthLayoutWrapper dataTestId="Registration-testid">
       <RegistrationForm />
       <AuthPageBanner />
     </AuthLayoutWrapper>
