@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { fireEvent, render } from '@testing-library/react';
 
-import { Input } from './input';
+import { Input } from './Input';
 
 describe('Input Component', () => {
   it('should render', () => {
