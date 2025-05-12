@@ -1,3 +1,5 @@
+import { ToursOverview } from '@/components/Tours/components/ToursOverview';
+
 export const Home = () => {
-  return <h1>home page</h1>;
+  return <ToursOverview />;
 };

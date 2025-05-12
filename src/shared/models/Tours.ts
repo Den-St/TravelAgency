@@ -15,3 +15,5 @@ export interface TourMock {
   averageRating: number;
   reviewCount: number;
 }
+
+export type TourTypeOptions = ['Resorts', 'Cruises', 'Hikes'];
