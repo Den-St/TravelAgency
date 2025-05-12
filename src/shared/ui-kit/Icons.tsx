@@ -5,6 +5,8 @@ export {
   LuUsersRound as Users,
   LuTreePalm as Resort,
   LuCircleUserRound as User,
+  LuChevronDown as ChevronDown,
+  LuChevronUp as ChevronUp,
 } from 'react-icons/lu';
 export { IoMdEyeOff as EyeCrossed } from 'react-icons/io';
 export { FaStar as Star } from 'react-icons/fa6';
